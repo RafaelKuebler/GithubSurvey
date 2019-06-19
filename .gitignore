@@ -2,3 +2,7 @@ settings.py
 
 venv/
 __pycache__/
+.idea/
+
+data.json
+excluded.json
