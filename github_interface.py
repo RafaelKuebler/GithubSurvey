@@ -10,7 +10,6 @@ Repo = namedtuple('Repo', ['name', 'url', 'gazers'])
 
 class GithubInterface(object):
     def __init__(self):
-        self.data = {}
         self.load_data()
         self.repos = []
         self.gh = Github(settings.github_user, settings.github_pass)
@@ -37,6 +36,7 @@ class GithubInterface(object):
         self.data[repo_url].append(email)
 
     def load_data(self):
+        self.data = {}
         if os.path.isfile('data.json'):
             with open('data.json', 'r') as fp:
                 self.data = json.load(fp)

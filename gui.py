@@ -16,7 +16,7 @@ def log_message(text):
     message.configure(state='normal')
     time = datetime.now()
     time_trimmed = time.strftime('%Y-%m-%d %H:%M:%S')
-    message.insert(tk.END, f"{time_trimmed}: {text}\n")
+    message.insert(tk.END, f"{time_trimmed}   {text}\n")
     message.configure(state='disabled')
     message.see(tk.END)
 
@@ -104,4 +104,5 @@ refresh_button.pack()
 pw.pack(side=tk.TOP, expand=tk.Y, fill=tk.BOTH, pady=2, padx='2m')
 send_button.pack()
 
+title_label.after(0, refresh_repos)
 master.mainloop()
