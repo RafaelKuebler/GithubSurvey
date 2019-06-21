@@ -9,5 +9,5 @@ def send_mail(recipient_email, email_body):
     server.login(settings.gmail_user, settings.gmail_pass)
 
     # TODO change to real recipient email
-    server.sendmail(settings.gmail_user, settings.gmail_user, email_body.encode('utf-8'))
+    server.sendmail(settings.gmail_user, recipient_email, email_body.encode('utf-8'))
     server.close()

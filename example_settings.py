@@ -8,7 +8,7 @@ gmail_pass = "123abc"
 email_text = """\
 From: {}
 To: {}
-Subject: Github Project \'{}\''
+Subject: Github Project \'{}\'
 
 Hi {}!
 

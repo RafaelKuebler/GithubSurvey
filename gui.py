@@ -48,7 +48,7 @@ def async_send_email():
         for name, email in repo.gazers:
             log_message(f"Sending to \'{name}\' ({email})")
             email_text = settings.email_text.format(settings.gmail_user,
-                                                    settings.gmail_user,
+                                                    email,
                                                     repo.name,
                                                     name,
                                                     repo.name,
